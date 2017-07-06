@@ -1,5 +1,5 @@
 {
-  "name": "nativescript-loading-indicator",
+  "name": "@essent/nativescript-loading-indicator",
   "version": "2.3.3",
   "description": "A NativeScript plugin for showing an overlayed loading indicator for ios and android.",
   "repository": {
