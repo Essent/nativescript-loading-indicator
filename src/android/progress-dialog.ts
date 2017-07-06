@@ -1,7 +1,7 @@
 import {OptionsCommon} from '../interfaces';
 import * as application from 'application';
 
-declare var android: any;
+declare var android: any; 
 
 export class LoadingIndicator {
   private _progressDialog: any;
@@ -17,12 +17,17 @@ export class LoadingIndicator {
         if (options.android) {
           if (options.android.indeterminate !== undefined) indeterminate = options.android.indeterminate;
           if (options.android.cancelable !== undefined) cancelable = options.android.cancelable;
-        }
-
-        this._progressDialog = android.app.ProgressDialog.show(context, "", options.message || "Loading", indeterminate, cancelable);
+        } 
+     
+        this._progressDialog = android.app.ProgressDialog.show(context, "", options.message || "", indeterminate, cancelable);
+        this._progressDialog.getWindow().setBackgroundDrawableResource(android.R.color.transparent);  
+        this._progressDialog.getWindow().setGravity(android.view.Gravity.CENTER);
+        const lp = this._progressDialog.getWindow().getAttributes();
+        lp.dimAmount = "0.1f";
+        lp.gravity = android.view.Gravity.CENTER;
+        this._progressDialog.getWindow().setAttributes(lp);
       } else if (this._progressDialog) {
-        // options
-        if (options.message && this._progressDialog.setMesssage) this._progressDialog.setMesssage(options.message);
+        // options 
         if (options.progress) this._progressDialog.setProgress(options.progress);
         // android specific
         if (options.android) {

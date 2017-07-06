@@ -1,5 +1,5 @@
 import { Observable } from 'data/observable';
-import { Page } from 'ui/page';
+import { Page } from 'ui/page'; 
 import { LoadingIndicator } from 'nativescript-loading-indicator';
 
 declare var MBProgressHUDModeDeterminate, MBProgressHUDModeAnnularDeterminate, MBProgressHUDModeDeterminateHorizontalBar, MBProgressHUDModeText, MBProgressHUDModeCustomView;

@@ -1,10 +1,10 @@
 {
   "name": "nativescript-loading-indicator",
-  "version": "2.3.2",
-  "description": "A NativeScript plugin for showing an overlayed loading indicator.",
+  "version": "2.3.3",
+  "description": "A NativeScript plugin for showing an overlayed loading indicator for ios and android.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/NathanWalker/nativescript-loading-indicator.git"
+    "url": "https://github.com/Essent/nativescript-loading-indicator.git"
   },
   "main": "loading-indicator",
   "typings": "index.d.ts",
@@ -28,16 +28,12 @@
       "ios": "2.5.0"
     }
   },
-  "bugs": {
-    "url": "https://github.com/NathanWalker/nativescript-loading-indicator/issues"
-  },
-  "homepage": "https://github.com/NathanWalker/nativescript-loading-indicator",
+  "homepage": "https://github.com/Essent/nativescript-loading-indicator",
   "license": "MIT",
   "scripts": {
-    "build": "tsc",
-    "demo.ios": "npm run preparedemo; cd demo; tns run ios --emulator",
-    "demo.android": "npm run preparedemo; cd demo; tns run android --emulator",
-    "preparedemo": "npm run build; cd demo; tns plugin remove nativescript-loading-indicator; tns plugin add ..; tns install",
+    "build": "tsc", 
+    "prepare.android.demo": "npm run build; cd demo; tns plugin remove nativescript-loading-indicator; tns plugin add ..; tns run android",
+    "prepare.ios.demo": "npm run build; cd demo; tns plugin remove nativescript-loading-indicator; tns plugin add ..; tns run ios",
     "setup": "npm i; cd demo; npm install; cd ..; npm run build; cd demo; tns plugin add ..; cd .."
   },
   "devDependencies": {
