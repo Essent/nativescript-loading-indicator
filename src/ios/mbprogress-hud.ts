@@ -1,12 +1,9 @@
+/// <reference path="../../node_modules/tns-platform-declarations/ios.d.ts" />
+/// <reference path="./objc!MBProgressHUD.d.ts" />
+
 import {OptionsCommon} from '../interfaces';
 import {Color} from 'color';
 import * as utils from 'utils/utils';
-
-declare var MBProgressHUD: any;
-declare var MBProgressHUDModeCustomView: any;
-declare var UIApplication: any;
-declare var UIImageView: any;
-declare var UIImage: any;
 
 export class LoadingIndicator {
   private _hud: any;
@@ -56,7 +53,7 @@ export class LoadingIndicator {
 
       if (ios.mode) {
         this._hud.mode = ios.mode;
-        if (ios.mode === MBProgressHUDModeCustomView && ios.customView) {
+        if (ios.mode === MBProgressHUDMode.CustomView && ios.customView) {
           this._hud.customView = UIImageView.alloc().initWithImage(UIImage.imageNamed(ios.customView));
         }
       }

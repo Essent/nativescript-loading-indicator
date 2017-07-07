@@ -1,7 +1,8 @@
+/// <reference path="../../node_modules/tns-platform-declarations/android.d.ts" />
+
 import {OptionsCommon} from '../interfaces';
 import * as application from 'application'; 
 
-declare var android: any; 
 declare var com: any;
 
 export class LoadingIndicator {

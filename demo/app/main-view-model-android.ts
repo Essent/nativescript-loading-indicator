@@ -1,6 +1,6 @@
 import { Observable } from 'data/observable';
 import { Page } from 'ui/page';
-import { LoadingIndicator } from 'nativescript-loading-indicator';
+import { LoadingIndicator } from '@essent/nativescript-loading-indicator';
 
 export class LoadingAndroidTest extends Observable {
   private indicator: LoadingIndicator;
