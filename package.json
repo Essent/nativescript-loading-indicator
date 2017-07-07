@@ -1,6 +1,6 @@
 {
   "name": "@essent/nativescript-loading-indicator",
-  "version": "2.3.3",
+  "version": "2.3.4-0",
   "description": "A NativeScript plugin for showing an overlayed loading indicator for ios and android.",
   "repository": {
     "type": "git",
@@ -11,9 +11,9 @@
   "author": "Nathan Walker <walkerrunpdx@gmail.com>",
   "contributors": [
     {
-			"name": "Pocketsmith"
-		}
-	],
+      "name": "Pocketsmith"
+    }
+  ],
   "keywords": [
     "NativeScript",
     "loading-indicator",
@@ -31,7 +31,7 @@
   "homepage": "https://github.com/Essent/nativescript-loading-indicator",
   "license": "MIT",
   "scripts": {
-    "build": "tsc", 
+    "build": "tsc",
     "android.demo": "npm run build; cd demo; tns plugin remove @essent/nativescript-loading-indicator; tns plugin add ..; tns run android",
     "ios.demo": "npm run build; cd demo; tns plugin remove @essent/nativescript-loading-indicator; tns plugin add ..; tns run ios",
     "setup": "npm i; cd demo; npm install; cd ..; npm run build; cd demo; tns plugin add ..; cd .."
