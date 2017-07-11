@@ -1,6 +1,6 @@
 import { Observable } from 'data/observable';
-import { Page } from 'ui/page';
-import { LoadingIndicator } from 'nativescript-loading-indicator';
+import { Page } from 'ui/page'; 
+import { LoadingIndicator } from '@essent/nativescript-loading-indicator';
 
 declare var MBProgressHUDModeDeterminate, MBProgressHUDModeAnnularDeterminate, MBProgressHUDModeDeterminateHorizontalBar, MBProgressHUDModeText, MBProgressHUDModeCustomView;
 
@@ -69,7 +69,7 @@ export class LoadingTest extends Observable {
   }
 
   public showLoaderDimBg() {
-    this.indicator.show({ ios: { dimBackground: true } });
+    this.indicator.show({ ios: { dimBackground: true, hideBezel: true } });
     this.demoLoader();
   }
 

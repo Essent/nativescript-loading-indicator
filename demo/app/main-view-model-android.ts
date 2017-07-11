@@ -1,6 +1,6 @@
 import { Observable } from 'data/observable';
 import { Page } from 'ui/page';
-import { LoadingIndicator } from 'nativescript-loading-indicator';
+import { LoadingIndicator } from '@essent/nativescript-loading-indicator';
 
 export class LoadingAndroidTest extends Observable {
   private indicator: LoadingIndicator;
@@ -11,7 +11,7 @@ export class LoadingAndroidTest extends Observable {
   }
 
   public showLoader() {
-    this.indicator.show({ message: 'Loading test...' });
+    this.indicator.show();
     this.demoLoader();
   }
 
