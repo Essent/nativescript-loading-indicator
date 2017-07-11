@@ -1,1 +1,1 @@
-pod 'MBProgressHUD'
+pod 'MBProgressHUD', :git => 'https://github.com/Essent/MBProgressHUD.git', :tag => '1.0.1'

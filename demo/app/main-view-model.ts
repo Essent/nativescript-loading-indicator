@@ -69,7 +69,7 @@ export class LoadingTest extends Observable {
   }
 
   public showLoaderDimBg() {
-    this.indicator.show({ ios: { dimBackground: true } });
+    this.indicator.show({ ios: { dimBackground: true, hideBezel: true } });
     this.demoLoader();
   }
 
