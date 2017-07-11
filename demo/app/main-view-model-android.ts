@@ -11,7 +11,7 @@ export class LoadingAndroidTest extends Observable {
   }
 
   public showLoader() {
-    this.indicator.show({ message: 'Loading test...' });
+    this.indicator.show();
     this.demoLoader();
   }
 

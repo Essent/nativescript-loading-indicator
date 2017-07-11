@@ -21,7 +21,7 @@ export class LoadingIndicator {
           if (options.android.cancelable !== undefined) cancelable = options.android.cancelable;
         } 
         const progressBar = com.kaopiz.kprogresshud.KProgressHUD;
-        this._progressDialog = progressBar.create(context).show();  
+        this._progressDialog = progressBar.create(context).setDimAmount(0.7).show();  
       } 
 
       return this._progressDialog;

@@ -9,7 +9,7 @@
     }
   },
   "dependencies": {
-    "@essent/nativescript-loading-indicator": "file:///Users/henk/Projects/Essent/nativescript-loading-indicator",
+    "@essent/nativescript-loading-indicator": "file:///Users/vipinessent/htdocs/nativescript-loading-indicator",
     "tns-core-modules": "~2.5.2"
   },
   "devDependencies": {
