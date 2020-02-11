@@ -1,20 +1,22 @@
-import {OptionsCommon} from '../interfaces';
-import {Color} from 'color';
-import * as utils from 'utils/utils';
+import * as common from './loading-indicator.common';
+import { Color } from 'tns-core-modules/color';
+import * as utils from 'tns-core-modules/utils/utils';
 
-declare var MBProgressHUD: any;
-declare var MBProgressHUDModeCustomView: any;
-declare var UIApplication: any;
-declare var UIImageView: any;
-declare var UIImage: any;
+ declare var MBProgressHUD: any;
+ declare var MBProgressHUDModeCustomView: any;
+ declare var MBProgressHUDBackgroundStyle: any;
+ declare var UIApplication: any;
+ declare var UIImageView: any;
+ declare var UIImage: any;
 
-export class LoadingIndicator {
+export class LoadingIndicator implements common.CommonLoadingIndicator {
   private _hud: any;
+
   // iOS allows indicator to be shown on specific views if desired
   // fallback to entire window
   private _targetView: any; // UIView
 
-  public show(options?: OptionsCommon) {
+  public show(options?: common.OptionsCommon) {
     if (typeof options === 'undefined') options = {};
     let ios = options.ios;
 
@@ -33,7 +35,7 @@ export class LoadingIndicator {
       if (ios.details) this._hud.detailsLabelText = ios.details;
       if (ios.square) this._hud.square = true;
       if (ios.margin) this._hud.margin = ios.margin;
-      if (ios.dimBackground) this._hud.dimBackground = true;
+      if (ios.dimBackground) this._hud.dimBackground = ios.dimBackground;
       if (ios.color) {
         // make activity and main label same color
         this._hud.activityIndicatorColor = new Color(ios.color).ios;
