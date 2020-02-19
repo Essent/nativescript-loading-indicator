@@ -1,12 +1,12 @@
-import {OptionsCommon} from '../interfaces';
-import * as application from 'application';
+import * as common from './loading-indicator.common';
+import * as application from 'tns-core-modules/application';
 
 declare var android: any;
 
-export class LoadingIndicator {
+export class LoadingIndicator implements common.CommonLoadingIndicator {
   private _progressDialog: any;
 
-  public show(options?: OptionsCommon) {
+  public show(options?: common.OptionsCommon) {
     let context = this._getContext();
     if (context) {
       if (typeof options === 'undefined') options = {};
