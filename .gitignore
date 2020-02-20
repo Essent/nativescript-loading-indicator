@@ -1,7 +1,7 @@
 .vscode
 *.js
 *.js.map
-!scripts/*.js
+!src/scripts/*.js
 node_modules
 demo/**/*.js
 demo/hooks
