@@ -1,6 +1,6 @@
 import { Observable } from 'tns-core-modules/data/observable';
 import { Page } from 'tns-core-modules/ui/page';
-import { LoadingIndicator } from 'nativescript-loading-indicator';
+import { LoadingIndicator } from '@essent/nativescript-loading-indicator';
 
 export class LoadingAndroidTest extends Observable {
   private indicator: LoadingIndicator;
